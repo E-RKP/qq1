@@ -35,5 +35,20 @@ let lista = {
     nickname: 'dedo',
     pa: '2u2943umcwo,,9'
   },
-  ]
+  ],
+
+  stampanomi: function(){
+    for (i=0; i<this.utenti.length;i++){
+      console.log(this.utenti[i].name)
+    }
+  },
+
+  stampanickname: function(){
+    for (i=0; i<this.utenti.length;i++){
+      console.log(this.utenti[i].nickname)
+    }
+  }
 }
+
+lista.stampanomi();
+lista.stampanickname();
