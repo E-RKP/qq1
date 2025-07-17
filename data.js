@@ -77,6 +77,38 @@ let lista = {
       }
     }
     return newArr;
+  },
+
+  cercautente: function(nome){
+    for (i=0; i<this.utenti.length;i++){
+      if (this.utenti[i].name === nome){
+        console.log(nome);
+        break;
+        
+      }
+    }
+  },
+
+  vecchio: function(){
+    let max = Number.NEGATIVE_INFINITY
+    for (i=0; i<this.utenti.length;i++){
+      if (this.utenti[i].età > max){
+        max = this.utenti[i].età
+      }
+    }
+    return max;
+  },
+
+  cercapa: function(pass){
+
+    let exist = false
+    for (i=0; i<this.utenti.length;i++){
+      if (this.utenti[i].pa === pass){
+        exist = true
+        break;
+      }
+    }
+    return exist;
   }
 }
 
@@ -85,3 +117,6 @@ lista.stampanickname();
 console.log(lista.contautenti())
 console.log(lista.etàmedia())
 console.log(lista.meno25())
+lista.cercautente('maria')
+console.log(lista.vecchio())
+console.log(lista.cercapa('0987h'))
